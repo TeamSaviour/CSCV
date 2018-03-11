@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>Relative Info</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/addrowtable.js"></script>
+<script src="a.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- container Start...-->
+
+  <div class="container">
+
+    <div class="card">
+      <div class="card-header bg-info">Relative Info...</div>
+      <div class="card-body">
+        <div class="form">
+
+
+        <div class="row">
+          <div class="col-8">
+            <div class="form-group">
+              <label for="relativename">Relative Name:</label>
+              <input type="text" id="one" class="form-control" >
+            </div>
+
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+                <label for="relation">Relation With Applicants</label>
+              <select class="form-control custom-select" id="two">
+                 <option selected>Open this select menu</option>
+                <option>Brother</option>
+                <option>Sister</option>
+                <option>Father</option>
+                <option>Mother</option>
+                <option>Uncle</option>
+                <option>GrandFather</option>
+                <option>GrandMother</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="scrutinycommitee">Scrutiny Commitee</label>
+          <select class="form-control custom-select" id="three">
+             <option selected>Open this select menu</option>
+            <option>Nagpur</option>
+            <option>Pune</option>
+            <option>Amravati</option>
+            <option>Aurangabad</option>
+            <option>Mumbai</option>
+            <option>Ahmednagar</option>
+            <option>Buldhana</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <div class="col-8">
+            <div class="form-group">
+              <label for="reason">Reason For Scrunity</label>
+              <select class="form-control custom-select" id="four">
+                <option selected>Open this select menu</option>
+                <option>Service</option>
+                <option>Scholarship Only</option>
+                <option>Education</option>
+                <option>Work</option>
+                <option>Government Work</option>
+                <option>OTHER</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+                <label for="when">When The Verification Took Place</label>
+                 <input class="form-control" type="date" value="2011-08-19" id="fifth">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-4">
+            <div class="form-group">
+              <label for="relativename">Was The Certificate of Caste Validity Granted ?</label>
+              <select class="form-control custom-select" name="sixth" id="sixth">
+
+                 <option selected>Open this select menu</option>
+                <option value="1">YES</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <div class="form-group">
+                <label for="rcvn">Relative's Caste Validity Certificate Number</label>
+                <input type="text" class="form-control" id="seventh"  value="">
+
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="form-group">
+              <label for="dateofissue">Date Of Issue Of Caste Validity Certificate</label>
+               <input class="form-control" type="date" value="" id="eighth" disabled="true">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+      <label for="reasonrejection">Reason For Rejection:</label>
+      <select class="form-control custom-select" name="ninth" id="ninth">
+        <option selected value="">Open this select menu</option>
+        <option>Documents Are Not Submitted Correct</option>
+        <option>DOcuments Missing</option>
+        <option>No Previous Record Found In Family</option>
+        <option>Specify</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="datereject">Date Of Rejection:</label>
+          <input class="form-control" name="tenth" type="date" value="" id="tenth">
+        </div>
+    </div>
+    </div>
+
+    <div class="form-group row">
+         <div class="offset-sm-2 col-sm-10">
+           <button type="submit" class="btn btn-primary" id="add">ADD</button>
+
+           <button type="submit" class="btn btn-danger " id="delete">Delete</button>
+         </div>
+
+       </div>
+
+       <div class="container">
+      <table id="tab_logic" class=" table table-bordered table-hover">
+      <thead>
+          <tr>
+            <td>index</td>
+              <td>Relative Name</td>
+              <td>Relation</td>
+              <td>Scrunity Commitee</td>
+              <td>Reason Of Scrunity</td>
+
+              <td>Year</td>
+              <td>CVC Granted</td>
+              <td>CVC Number</td>
+              <td>CVC Date</td>
+              <td>Reason Of Rejection</td>
+              <td>Rejection Date</td>
+          </tr>
+      </thead>
+      <tbody>
+          <tr id="addr0">
+
+          </tr>
+          <tr id="addr1"></tr>
+      </tbody>
+
+  </table>
+
+
+       </div>
+     </div>
+
+</div>
+
+   </div>
+
+
+ </div>
+
+</body>
+
+
+</html>
