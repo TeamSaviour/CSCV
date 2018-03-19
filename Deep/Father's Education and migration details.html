@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Father's education and migration</title>
+
+	 <link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+	<style type="text/css">
+		.form-group.required .control-label:before {
+  content:"*";
+  color:red;
+}
+  span{
+     color: red;
+  }
+ 
+body{
+	padding-top: 4.5rem;
+	padding-bottom: 4.5rem;
+
+}
+ 
+
+header
+{
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	font-size: 25px;	
+}
+
+#info
+{
+	font-size: 18px;
+	color: #555;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+a{
+	color: #074E8C;
+}
+.bg-info{
+	font-size: 20px;
+}
+#area{
+	background: #ffe6e6;
+	border-left: #ffeb3b;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.alert {
+  border-left: 6px solid #ffeb3b;
+  }
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+.save{
+	 background-color: #4CAF50;
+    color: white;
+
+}
+button:hover{
+	background-color: #ddd;
+    color: black;
+}
+button{
+	text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+
+}
+.buttonholder{
+	text-align: center;
+}
+
+	</style>
+</head>
+<body>
+
+<form>
+	<div class="container-fluid col-md-8"> 
+		 <div class="card col-md-12">
+      <div class="form-group bg-info text-white card-header col-md-12">
+        	    Father's Education Details
+            </div>
+
+            <div class="card col-md-12">
+            <div class="form-group">
+                    <label for="qualification" class="col-md-12 col-form-label control-label">Father's Qualification
+                        <input type="text" class="form-control col-md-6" id="qualification" placeholder="Qualification">
+                    </label>
+            </div>
+
+        
+
+        <table id="fatherTable" class="form-group col-sm-12 table order-list">
+    <thead>
+        <tr>
+            <td>Education Category</td>
+            <td>Institute name</td>
+            <td>Institute Address</td>
+            <td>Year From</td>
+            <td>Year to</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="form-group col-sm-3">
+                <input type="text" name="education" class="form-control col-md-2" />
+            </td>
+            <td class="form-group col-sm-3">
+                <input type="text" name="i_name"  class="form-control"/>
+            </td>
+            <td class="form-group col-sm-2">
+                <input type="text" name="i_address"  class="form-control"/>
+            </td>
+            <td class="form-group col-sm-2">
+                <input type="text" name="from"  class="form-control"/>
+            </td> 
+            <td class="form-group col-sm-2">
+                <input type="text" name="to"  class="form-control"/>
+            </td>
+            
+            <td colspan="5">
+                <input type="button" class="btn btn-lg btn-block " id="addrow" value="Add Row" />
+            <td class="col-sm-2"><a class="deleteRow"></a></td>
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
+<script type="text/javascript">
+
+$(document).ready(function () {
+    var counter = 0;
+
+    $("#addrow").on("click", function () {
+        var newRow = $("<tr>");
+        var cols = "4";
+
+        cols += '<td><input type="text" class="form-control col-md-3" name="education' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control col-md-3" name="i_name' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control col-md-2" name="i_address' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control col-md-2" name="from' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control col-md-2" name="to' + counter + '"/></td>';
+
+        cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
+        newRow.append(cols);
+        $("table.order-list").append(newRow);
+        counter++;
+    });
+
+
+
+    $("table.order-list").on("click", ".ibtnDel", function (event) {
+        $(this).closest("tr").remove();       
+        counter -= 1
+    });
+
+
+});
+
+
+
+function calculateRow(row) {
+    var price = +row.find('input[name^="price"]').val();
+
+}
+
+function calculateGrandTotal() {
+    var grandTotal = 0;
+    $("table.order-list").find('input[name^="price"]').each(function () {
+        grandTotal += +$(this).val();
+    });
+    $("#grandtotal").text(grandTotal.toFixed(2));
+}
+
+
+</script>
+
+
+
+        <div class="form-group col-md-12 row">
+        	
+        	<label class="col-md-3">Father's occupation</label> 
+        
+            <label class="radio-inline col-md-3"><input type="radio" name="optradio">Service</label>
+            <label class="radio-inline col-md-3"><input type="radio" name="optradio">Business</label>
+            <label class="radio-inline col-md-3"><input type="radio" name="optradio">other</label>
+        </div>
+
+
+        <div class="form-group row" >
+   		    <div class="col-md-6">
+   		        <label for="of_name" class="col-md-12 col-form-label control-label">Office Name
+   			        <input type="text" class="form-control" id="of_name" placeholder="Office Name">
+   		        </label>
+   		    </div>
+   		    <div class="form-group col-md-6">
+   			    <label for="designation" class="col-md-12 col-form-label">Designation
+ 			        <input type="text" class="form-control" id="designation" placeholder="Designation">
+                </label>
+   		    </div>
+        </div>
+
+
+        <div class="form-group">
+                    <label for="of_address" class="col-md-12 col-form-label control-label">Office Address
+                        <textarea class="form-control" rows="2" id="of_address"></textarea>
+                    </label>
+        </div>
+
+        
+        <div class="form-group">
+                    <label for="of_number" class="col-md-6 col-form-label control-label">Office contact no
+                        <input type="text" class="form-control" id="of_number" plceholder="Office contact Number">
+                    </label>
+        </div>
+
+
+
+        <div class="form-group">
+                    <label for="tr_business" class="col-md-6 col-form-label control-label">Traditional Business
+                        <input type="text" class="form-control" id="tr_business" plceholder="Office contact Number">
+                    </label>
+        </div>
+ 
+    </div>
+</p>
+        
+
+
+       
+        <!-- Mention Migration Details -->
+        <p>
+        <p class="bg-info text-white card-header col-md-12 ">Mention Migration Details</p> 
+        <div class="card col-md-12">
+        	<p>
+        <div class="form-group col-md-12 row">
+        	
+        	<label class="col-md-4">Has Applicant or any member of applicant's family migrated from other state</label> 
+        	
+            <label class="radio-inline col-md-4"><input type="radio" name="optradio">Yes</label>
+            <label class="radio-inline col-md-4"><input type="radio" name="optradio">No</label>
+        </div> 
+        </p> 
+        
+        <div class="form-group col-sm-12">If migrated,</div>
+
+
+
+        <div class="form-group row" >
+   		    <div class="col-md-6">
+   		        <label for="state" class="col-md-12 col-form-label control-label">Which State?
+   			   		<select class="form-control" id="state">
+   		                <option>--select--</option>		
+       	                 <option>Andaman and Nicobar Islands</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chandigarh</option>
+                                <option>Chhattisgarh</option>
+                                <option>Dadra and Nagar Haveli</option>
+                                <option>Daman and Diu</option>
+                                <option>Delhi</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jammu and Kashmir</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Lakshadweep</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur	</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Puducherry</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Tripura</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Uttarakhand</option>
+                                <option>West Bengal</option>
+       	            </select>
+   		        </label>
+   		    </div>
+   		   
+
+
+   		    <div class="form group col-md-6">
+   			    <label for="when" class="col-md-12 col-form-label control-label">When(YYYY)
+ 					<input type="text" class="form-control" id="when" placeholder="YYYY">
+                </label>
+   		    </div>
+   	    </div>
+
+       
+        <div class="form-group">
+   		       	<label for="reason" class="col-md-12 col-form-label control-label">Reason for Migration
+   			   		<select class="form-control col-md-5" id="reason">
+   		                <option>--select--</option>		
+       	                <option>Education</option>
+       	                <option>Business</option>
+                        <option>Service</option>
+                        <option>other</option>
+       	            </select>
+   		        </label>
+   		</div>        
+    </div>
+
+</p>
+<div class="buttonholder">
+      	<a href="Student_education details and native details.html" class="previous">&laquo; Previous</a>
+       	<button type="button" class="save" id="save">Save</button>
+       <a href="Blood relation previous application details.html" class="next" id="next">Next &raquo;</a>
+
+       </div>
+</div>
+
+	</div>
+</form>
+
+</body>
+</html>

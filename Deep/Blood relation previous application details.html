@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood relation and previous apllication details</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+	<style type="text/css">
+		.form-group.required .control-label:before {
+  content:"*";
+  color:red;
+}
+  span{
+     color: red;
+  }
+ 
+body{
+	padding-top: 4.5rem;
+	padding-bottom: 4.5rem;
+
+}
+ 
+
+header
+{
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	font-size: 25px;	
+}
+
+#info
+{
+	font-size: 18px;
+	color: #555;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+a{
+	color: #074E8C;
+}
+.bg-info{
+	font-size: 20px;
+}
+#area{
+	background: #ffe6e6;
+	border-left: #ffeb3b;
+}
+
+.wrapper {
+    text-align: center;
+}
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.alert {
+  border-left: 6px solid #ffeb3b;
+  }
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+.save{
+	 background-color: #4CAF50;
+    color: white;
+
+}
+button:hover{
+	background-color: #ddd;
+    color: black;
+}
+button{
+	text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+
+}
+.buttonholder{
+	text-align: center;
+}
+
+	</style>
+</head>
+<body>
+
+<form>
+	<div class="container-fluid col-md-8">
+		<div class="card col-md-12">
+      <p class="bg-info text-white card-header col-md-12 ">Caste Certificate Validity Details of Applicant's Blood Relation(s)</p> 
+    <div class="card col-md-12">
+        <p>
+        <div class="form-group col-md-12 row">
+        	
+        	<label class="col-md-4">Did any verification take place for any relative earlier?</label>
+        	
+            <label class="radio-inline col-md-4"><input type="radio" name="optradio" required>Yes</label>
+            <label class="radio-inline col-md-4"><input type="radio" name="optradio">No</label>
+        </div> 
+        </p>
+    </div>   
+    
+
+        <!-- Previous Application Details Of Applicant -->
+        <p>
+
+        <p class="bg-info text-white card-header col-md-12" id="previous">Previous Application Details Of Applicant</p>
+         <div class="card col-md-12">
+        <p>
+        <div class="form-group col-md-12 row">
+        	
+        	<label class="col-md-4">If applicant has applied for caste validity certificate before any commitee in Maharashtra</label> 
+        	
+            <label class="radio-inline col-md-4"><input type="radio" name="optradio" required>Yes</label>
+            <label class="radio-inline col-md-4"><input type="radio" name="optradio">No</label>
+        </div> 
+        </p>  
+     
+
+        
+        <div class="form-group">
+   		       	<label for="commitee" class="col-md-12 col-form-label control-label">Which commitee
+   			   		<select class="form-control col-md-8" id="commitee">
+   		                <option>--select Scrutiny Commitee--</option>		
+       	                <option>Education</option>
+       	                <option>Business</option>
+                        <option>Service</option>
+                        <option>other</option>
+       	            </select>
+   		        </label>
+   		</div>  
+
+        
+
+         <div class="form-group">
+   		       	<label for="category" class="col-md-12 col-form-label control-label">Category Applied
+   			   		<select class="form-control col-md-8" id="category">
+   		                <option>--select category--</option>		
+       	               <option>Sheduled Caste</option>
+       	            <option>Scheduled Caste Converted To Buddism</option>
+                    <option>Vimukta Jati(A)</option>
+                    <option>Nomadic Tribe(B)</option>
+                    <option>Nomadic Tribe(C)</option>
+                    <option>Nomadic Tribe(D)</option>
+                    <option>Other Backward Class</option>
+                    <option>Special Backward Class</option>
+                    <option>Educationally and Socially Backward Category</option>
+                    <option>Special Backward Category(A)</option>
+       	            </select>
+   		        </label>
+   		</div>  
+
+
+
+        <div class="form-group">
+   		       	<label for="caste" class="col-md-12 col-form-label control-label">Caste Applied
+   			   		<select class="form-control col-md-8" id="caste">
+   		                <option>--select caste--</option>		
+       	                <option>Education</option>
+       	                <option>Business</option>
+                        <option>Service</option>
+                        <option>other</option>
+       	            </select>
+   		        </label>
+   		</div>  
+
+        
+
+        <div class="form-group">
+   		       	<label for="subcaste" class="col-md-12 col-form-label control-label">Sub cast
+   			   		<select class="form-control col-md-8" id="subcaste">
+   		                <option>--select subcaste--</option>		
+       	                <option>Education</option>
+       	                <option>Business</option>
+                        <option>Service</option>
+                        <option>other</option>
+       	            </select>
+   		        </label>
+   		</div>  
+
+         <div class="form-group row">
+            <div class="form group required col-md-6">
+   			    <label for="date" class="col-md-12 col-form-label control-label">Date of Application
+ 					<input type="text" class="form-control" id="date" placeholder="Date">
+                </label>
+   		    </div>
+   	    
+           
+
+        
+   		    <div class="col-md-6">
+   		        <label for="dicision" class="col-md-12 col-form-label control-label">Commitee's Decision
+   			   		<select class="form-control" id="dicision">
+   		                <option>--select Commitee Decision--</option>		
+       	                <option>Ahmednagar</option>
+       	                <option>Akola</option>
+                        <option>Amravati</option>
+                        <option>Aurangabad</option>
+       	            </select>
+   		        </label>
+   		    </div>
+        </div>
+
+        
+
+        <div class="form-group">
+   		       	<label for="scrutiny" class="col-md-12 col-form-label control-label">Purpose of Scrutiny
+   			   		<select class="form-control col-md-8" id="scrutiny">
+   		                <option>--select purpose of Scrutiny--</option>		
+       	                <option>Education</option>
+       	                <option>Business</option>
+                        <option>Service</option>
+                        <option>other</option>
+       	            </select>
+   		        </label>
+   		</div> 
+   		</div>
+        </p>
+    <!-- Documents -->
+    <p>
+            
+                <p class="bg-info text-white card-header col-md-12" id="previous">Documents</p>
+         <div class="card col-md-12">
+    <p>
+        <div class="form-check">
+            <label class="form-check-label col-md-12">
+               <input type="checkbox" class="form-check-input" value="">Other Documents
+               <textarea class="form-control col-md-8" rows="2" id="documents"></textarea>
+            </label>
+        </div>
+         </p>
+        </div>
+   
+         <!-- Declaration -->
+           <p>
+        <div class="form-group col-sm-12">
+                <h4>Declaration</h4>
+        </div>
+        </p>
+   
+    <div class="form-group">
+        <textarea class="col-sm-12" rows="3" style="overflow-y:scroll;" id="area">
+         -All details mentioned in application are true to best of my knowledge
+         -Caste certificate number which I have mentioned in application is the 
+          only one caste certificate I possessed via legal channels
+         -I have never applied for caste validity certificate before 
+        </textarea>
+    </div>
+
+
+    <div class="form-check">
+            <label class="form-check-label col-md-12">
+               <input type="checkbox" class="form-check-input" value="">I agree to all terms and conditions started in above declaration.
+               
+            </label>
+    </div>
+</p>
+        
+
+  
+
+ <div class="buttonholder">
+      	<a href="Father's Education and migration details.html" class="previous">&laquo; Previous</a>
+       	<button type="button" class="save" id="save">Save</button>
+        <button type="submit" class="save">Submit</button>
+
+       </div>
+  </div>           
+</div>
+    </div>
+
+</form>
+</body>
+</html>

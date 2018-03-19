@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Birth place Details</title>
+	 <link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+	<style type="text/css">
+		.form-group.required .control-label:before {
+  content:"*";
+  color:red;
+}
+  span{
+     color: red;
+  }
+ 
+body{
+	padding-top: 4.5rem;
+	padding-bottom: 4.5rem;
+
+}
+ 
+
+header
+{
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	font-size: 25px;	
+}
+
+#info
+{
+	font-size: 18px;
+	color: #555;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+a{
+	color: #074E8C;
+}
+.bg-info{
+	font-size: 20px;
+}
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+.save{
+	 background-color: #4CAF50;
+    color: white;
+
+}
+button:hover{
+	background-color: #ddd;
+    color: black;
+}
+button{
+	text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+
+}
+.buttonholder{
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<form>
+	<div class="container-fluid col-md-8">
+		  <div class="card col-md-12">
+
+<div class="bg-info text-white card-header form-group col-md-12">
+            Birth Place Details
+        </div>
+        
+        <div class="alert alert-warning col-sm-12 ">
+			 If State is other than Maharashtra,then district & taluka will not be available. Please mention your entire address in Birthplace along with state and pincode      
+        </div>
+           
+            <div class="card col-md-12">   
+        <div class="form-group required row">
+   		    <div class="col-md-6">
+   		        <label for="a_country" class="col-md-12 col-form-label control-label">Country
+   			   		<select class="form-control" id="a_country" name="a_country" required>
+   		                <option>--Your country--</option>		
+       	                <option>Ahmednagar</option>
+       	                <option>Akola</option>
+                        <option>Amravati</option>
+                        <option>Aurangabad</option>
+       	            </select>
+   		        </label>
+   		    </div>
+   		   
+       
+
+   		    <div class="form group required col-md-6">
+   			    <label for="a_state" class="col-md-12 col-form-label control-label">State
+ 					<select class="form-control" id="a_state" name="a_state" required>
+   		                <option>--Your state--</option>		
+       	                        <option>Andaman and Nicobar Islands</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chandigarh</option>
+                                <option>Chhattisgarh</option>
+                                <option>Dadra and Nagar Haveli</option>
+                                <option>Daman and Diu</option>
+                                <option>Delhi</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jammu and Kashmir</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Lakshadweep</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur	</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Puducherry</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Tripura</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Uttarakhand</option>
+                                <option>West Bengal</option>
+       	            </select>
+                </label>
+   		    </div>
+   	    </div>
+           
+
+        <div class="form-group required row" >
+   		    <div class="col-md-6">
+   		        <label for="a_district" class="col-md-12 col-form-label control-label">District
+   			   		<select class="form-control" id="a_district" name="a_district" required>
+   		              <option selected>--Your District--</option>
+                      <option value="AHM">Ahmednagar</option>
+                      <option value="AKO">Akola</option>
+                      <option value="AMR">Amravati</option>
+                      <option value="AUR">Aurangabad</option>
+                      <option value="BEE">Beed</option>
+                      <option value="BHA">Bhandara</option>
+                      <option value="BUL">Buldana</option>
+                      <option value="CHA">Chandrapur</option>
+                      <option value="DHU">Dhule</option>
+                      <option value="GAD">Gadchiroli</option>
+                      <option value="GON">Gondiya</option>
+                      <option value="HIN">Hingoli</option>
+                      <option value="JAG">Jalgaon</option>
+                      <option value="JAL">Jalna</option>
+                      <option value="KOL">Kolhapur</option>
+                      <option value="LAT">Latur</option>
+                      <option value="MUM">Mumbai City</option>
+                      <option value="MUS">Mumbai Suburban</option>
+                      <option value="NAG">Nagpur</option>
+                      <option value="NAN">Nanded</option>
+                      <option value="NAD">Nandurbar</option>
+                      <option value="NAS">Nashik</option>
+                      <option value="OSM">Osmanabad</option>
+                      <option value="PAL">Palghar</option>
+                      <option value="PAR">Parbhani</option>
+                      <option value="PUN">Pune</option>
+                      <option value="RAI">Raigarh</option>
+                      <option value="RAT">Ratnagiri</option>
+                      <option value="SAN">Sangli</option>
+                      <option value="SAT">Satara</option>
+                      <option value="SIN">Sindhudurg</option>
+                      <option value="SOL">Solapur</option>
+                      <option value="THA">Thane</option>
+                      <option value="WAR">Wardha</option>
+                      <option value="WAS">Washim</option>
+                      <option value="YAV">Yavatmal</option>
+       	            </select>
+   		        </label>
+   		    </div>
+   		   
+
+
+   		    <div class="form group required col-md-6">
+   			    <label for="a_taluka" class="col-md-12 col-form-label control-label">Taluka
+ 					<select class="form-control" id="a_taluka" name="a_taluka" required>
+   		                <option>--select--</option>		
+       	                <option>Ahmednagar</option>
+       	                <option>Akola</option>
+                        <option>Amravati</option>
+                        <option>Aurangabad</option>
+       	            </select>
+                </label>
+   		    </div>
+   	    </div>
+
+            <div class="form-group required">
+                    <label for="a_b_place" class="col-md-12 col-form-label control-label">Birth place
+                        <input type="text" class="form-control" id="a_b_place" name="a_b_place" placeholder="Place" required>
+                    </label>
+            </div>
+
+
+            <div class="form-group required">
+                    <label for="a_motherTongue" class="col-md-12 col-form-label control-label">Mother Tongue
+                        <input type="text" class="form-control" id="a_motherTongue" name="a_motherTongue" placeholder="Mother Tongue" required>
+                    </label>
+            </div>
+  
+            <div class="form-group">
+                    <label for="god" class="col-md-12 col-form-label control-label">God/Goddess Name
+                        <input type="text" class="form-control" id="god" name="god" placeholder="God/Goddess name">
+                    </label>
+                </div>
+
+            <div class="form-group required">
+                    <label for="relatives" class="col-md-12 col-form-label control-label">Five different surnames of relatives or person from the same caste as the applicant
+                    	<div class="form-group col-md-12 row">
+                    	    <div for="f_surName" class="form-group col-md-4">
+                               <input type="text" class="form-control" id="f_surName" required>
+                            </div> 
+                            <div for="s_surName" class="form-group col-md-4">
+                               <input type="text" class="form-control" id="s_surName" name="s_surName" required>
+                            </div> 
+                            <div for="t_surName" class="form-group col-md-4">
+                               <input type="text" class="form-control" id="t_surName" name="t_surName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-12 row">
+                        	<div for="fo_surName" class="form-group col-md-4">
+                        	    <input type="text" class="form-control" id="fo_surName" name="fo_surName" required>	
+                        	</div>
+                        	<div for="fi_surName" class="form-group col-md-4">
+                        	    <input type="text" class="form-control" id="fi_surName" name="fi_surName" required>
+                        	</div>
+                        </div>   
+                    </label>
+            </div>
+  
+              
+            <div class="form-group required">
+                    <label for="mobileNo" class="col-md-12 col-form-label control-label">Mobile No.(for SMS Service)
+                        <input type="text" class="form-control col-md-6" id="mobileNo" name="mobileNo" placeholder="No." required>
+                    </label>
+            </div>
+            
+
+            <div class="form-group">
+                    <label for="email" class="col-md-12 col-form-label control-label">Email Address
+                        <input type="email" class="form-control col-md-12" id="email" name="email" placeholder="Email ID">
+                    </label>
+            </div>
+  
+        </div>
+         </p>   
+            <!-- Address for Correspondence -->
+            <p>
+              
+            <div class="bg-info text-white card-header col-sm-12">
+                Address for Correspondence
+            </div>
+            
+             
+             <div class="card col-md-12">  
+            
+            <div class="form-group required">
+                    <label for="corresAddress1" class="col-md-12 col-form-label control-label">Address Line 1
+                        <input type="text" class="form-control" id="corresAddress1" name="corresAddress1" placeholder="Address Line 1" required>
+                    </label>
+            </div>
+            
+            <div class="form-group">
+                    <label for="corresAddress2" class="col-md-12 col-form-label control-label">Address Line 2
+                        <input type="text" class="form-control" id="corresAddress2" name="corresAddress2" plceholder="Address Line 2">
+                    </label>
+            
+            </div> 
+
+
+            <div class="form-group">
+                    <label for="a_town" class="col-md-12 col-form-label control-label">Village/Town
+                        <input type="text" class="form-control" id="a_town" name="a_town" plceholder="Village/Town">
+                    </label>
+            </div>     
+
+
+            <div class="form-group required row" >
+   		    <div class="col-md-6">
+   		        <label for="country" class="col-md-12 col-form-label control-label">Country
+   			   		<select class="form-control" id="country" name="country" required>
+   		                <option>--select--</option>		
+       	                <option>Ahmednagar</option>
+       	                <option>Akola</option>
+                        <option>Amravati</option>
+                        <option>Aurangabad</option>
+       	            </select>
+   		        </label>
+   		    </div>
+   		   
+
+
+   		    <div class="form group required col-md-6">
+   			    <label for="state" class="col-md-12 col-form-label control-label">State
+ 					<select class="form-control" id="state" name="state" required>
+ 						<option>--Select State--</option>
+   		                 <option>Andaman and Nicobar Islands</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chandigarh</option>
+                                <option>Chhattisgarh</option>
+                                <option>Dadra and Nagar Haveli</option>
+                                <option>Daman and Diu</option>
+                                <option>Delhi</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jammu and Kashmir</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Lakshadweep</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur	</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Puducherry</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Tripura</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Uttarakhand</option>
+                                <option>West Bengal</option>
+       	            </select>
+                </label>
+   		    </div>
+   	    </div>
+              
+
+        <div class="form-group required row" >
+   		    <div class="col-md-6">
+   		        <label for="district" class="col-md-12 col-form-label control-label">District
+   			   		<select class="form-control" id="district" name="district" required>
+   		               <option selected> -Your District-</option>
+                      <option value="AHM">Ahmednagar</option>
+                      <option value="AKO">Akola</option>
+                      <option value="AMR">Amravati</option>
+                      <option value="AUR">Aurangabad</option>
+                      <option value="BEE">Beed</option>
+                      <option value="BHA">Bhandara</option>
+                      <option value="BUL">Buldana</option>
+                      <option value="CHA">Chandrapur</option>
+                      <option value="DHU">Dhule</option>
+                      <option value="GAD">Gadchiroli</option>
+                      <option value="GON">Gondiya</option>
+                      <option value="HIN">Hingoli</option>
+                      <option value="JAG">Jalgaon</option>
+                      <option value="JAL">Jalna</option>
+                      <option value="KOL">Kolhapur</option>
+                      <option value="LAT">Latur</option>
+                      <option value="MUM">Mumbai City</option>
+                      <option value="MUS">Mumbai Suburban</option>
+                      <option value="NAG">Nagpur</option>
+                      <option value="NAN">Nanded</option>
+                      <option value="NAD">Nandurbar</option>
+                      <option value="NAS">Nashik</option>
+                      <option value="OSM">Osmanabad</option>
+                      <option value="PAL">Palghar</option>
+                      <option value="PAR">Parbhani</option>
+                      <option value="PUN">Pune</option>
+                      <option value="RAI">Raigarh</option>
+                      <option value="RAT">Ratnagiri</option>
+                      <option value="SAN">Sangli</option>
+                      <option value="SAT">Satara</option>
+                      <option value="SIN">Sindhudurg</option>
+                      <option value="SOL">Solapur</option>
+                      <option value="THA">Thane</option>
+                      <option value="WAR">Wardha</option>
+                      <option value="WAS">Washim</option>
+                      <option value="YAV">Yavatmal</option>
+       	            </select>
+   		        </label>
+   		    </div>
+   		   
+
+
+   		    <div class="form group required col-md-6">
+   			    <label for="taluka" class="col-md-12 col-form-label control-label">Taluka
+ 					<select class="form-control" id="taluka" name="taluka" required>
+   		                <option>--select--</option>		
+       	                <option>Ahmednagar</option>
+       	                <option>Akola</option>
+                        <option>Amravati</option>
+                        <option>Aurangabad</option>
+       	            </select>
+                </label>
+   		    </div>
+   	    </div>
+
+            
+            <div class="form-group required">
+                    <label for="a_pincode" class="col-md-12 col-form-label control-label">Pin code
+                        <input type="text" class="form-control col-md-6" id="a_pincode" name="a_pincode" placeholder="Pin code" required>
+                    </label>
+            </div>
+
+         </div>  
+     </p>
+
+      <div class="buttonholder">
+      	<a href="Applicant_Details.html" class="previous">&laquo; Previous</a>
+       	<button type="button" class="save" id="save">Save</button>
+       <a href="Student_education details and native details.html" class="next" id="next">Next &raquo;</a>
+
+       </div>
+       
+     </div>
+     </div>
+</form>     
+</body>
+</html>

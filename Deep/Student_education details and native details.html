@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Education and native place details</title>
+	 <link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+	<style type="text/css">
+		.form-group.required .control-label:before {
+  content:"*";
+  color:red;
+}
+  span{
+     color: red;
+  }
+ 
+body{
+	padding-top: 4.5rem;
+	padding-bottom: 4.5rem;
+
+}
+ 
+
+header
+{
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	font-size: 25px;	
+}
+
+#info
+{
+	font-size: 18px;
+	color: #555;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+a{
+	color: #074E8C;
+}
+.bg-info{
+	font-size: 20px;
+}
+#area{
+	background: #ffe6e6;
+	border-left: #ffeb3b;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.alert {
+  border-left: 6px solid #ffeb3b;
+  }
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+.save{
+	 background-color: #4CAF50;
+    color: white;
+
+}
+button:hover{
+	background-color: #ddd;
+    color: black;
+}
+button{
+	text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+
+}
+.buttonholder{
+	text-align: center;
+}
+
+	</style>
+</head>
+<body>
+<form>
+	<div class="container-fluid col-md-8">	
+		 <div class="card col-md-12">
+
+   <p class="bg-info text-white card-header col-md-12 ">Student Education Details</p>  
+              
+     
+                 
+		<div class="alert alert-warning col-md-12">
+			Select District and Taluka where applicant's college is located
+		</div>
+ 
+   
+      
+   <div class="card col-md-12">  
+        <div class="form-group required row" >
+   		    <div class="col-md-6">
+   		        <label for="district" class="col-md-12 col-form-label control-label">District
+   			   		<select class="form-control" id="district">
+   		               <option selected> -Your District-</option>
+                      <option value="AHM">Ahmednagar</option>
+                      <option value="AKO">Akola</option>
+                      <option value="AMR">Amravati</option>
+                      <option value="AUR">Aurangabad</option>
+                      <option value="BEE">Beed</option>
+                      <option value="BHA">Bhandara</option>
+                      <option value="BUL">Buldana</option>
+                      <option value="CHA">Chandrapur</option>
+                      <option value="DHU">Dhule</option>
+                      <option value="GAD">Gadchiroli</option>
+                      <option value="GON">Gondiya</option>
+                      <option value="HIN">Hingoli</option>
+                      <option value="JAG">Jalgaon</option>
+                      <option value="JAL">Jalna</option>
+                      <option value="KOL">Kolhapur</option>
+                      <option value="LAT">Latur</option>
+                      <option value="MUM">Mumbai City</option>
+                      <option value="MUS">Mumbai Suburban</option>
+                      <option value="NAG">Nagpur</option>
+                      <option value="NAN">Nanded</option>
+                      <option value="NAD">Nandurbar</option>
+                      <option value="NAS">Nashik</option>
+                      <option value="OSM">Osmanabad</option>
+                      <option value="PAL">Palghar</option>
+                      <option value="PAR">Parbhani</option>
+                      <option value="PUN">Pune</option>
+                      <option value="RAI">Raigarh</option>
+                      <option value="RAT">Ratnagiri</option>
+                      <option value="SAN">Sangli</option>
+                      <option value="SAT">Satara</option>
+                      <option value="SIN">Sindhudurg</option>
+                      <option value="SOL">Solapur</option>
+                      <option value="THA">Thane</option>
+                      <option value="WAR">Wardha</option>
+                      <option value="WAS">Washim</option>
+                      <option value="YAV">Yavatmal</option>
+       	            </select>
+   		        </label>
+   		    </div>
+   		   
+
+
+   		    <div class="form group required col-md-6">
+   			    <label for="taluka" class="col-md-12 col-form-label control-label">Taluka
+ 					<select class="form-control" id="select">
+   		                <option>--select--</option>		
+       	                <option>Ahmednagar</option>
+       	                <option>Akola</option>
+                        <option>Amravati</option>
+                        <option>Aurangabad</option>
+       	            </select>
+                </label>
+   		    </div>
+   	    </div>
+   	
+
+
+
+        <div class="form-group required">
+            <label for="select" class="col-md-12 col-form-label control-label">Institute/College Name
+                <select class="form-control" id="select">
+   		            <option>--select--</option>		
+       	            <option>Ahmednagar</option>
+       	            <option>Akola</option>
+                    <option>Amravati</option>
+                    <option>Aurangabad</option>
+       	        </select>
+            </label>
+        </div>
+  
+
+        <div class="form-group required">
+            <label for="course" class="col-md-12 col-form-label control-label">Course Name
+                <select class="form-control" id="course">
+   		            <option>--select--</option>		
+       	            <option>Ahmednagar</option>
+       	            <option>Akola</option>
+                    <option>Amravati</option>
+                    <option>Aurangabad</option>
+       	        </select>
+            </label>
+        </div>
+  
+
+
+
+
+
+        <div class="form-group required row" >
+   		    <div class="col-md-6">
+   		        <label for="year" class="col-md-12 col-form-label control-label">Year(YYYY)
+   			        <input type="text" class="form-control" id="year" placeholder="YYYY" required>
+   		        </label>
+   		    </div>
+   		    <div class="form group col-md-6">
+   			    <label for="telephone" class="col-md-12 col-form-label">Insitute/College Telephone No.
+ 			        <input type="text" class="form-control" id="telephone" placeholder="Telephone No.">
+                </label>
+   		    </div>
+        </div>
+
+
+            <div class="form-group required">
+                    <label for="reg_no" class="col-md-12 col-form-label control-label">Permanent Registration Number allocated to applicant
+                        <input type="text" class="form-control col-md-6" id="reg_no" placeholder="Registration Number" required>
+                    </label>
+            </div>
+
+        
+
+        <div class="form-group required row" >
+   		    <div class="col-md-6">
+   		        <label for="division" class="col-md-12 col-form-label control-label">Applicant's Division
+   			        <input type="text" class="form-control" id="division" placeholder="Division" required>
+   		        </label>
+   		    </div>
+   		    <div class="form group col-md-6">
+   			    <label for="roll_no" class="col-md-12 col-form-label">Applicant's Roll No.
+ 			        <input type="text" class="form-control" id="roll_no" placeholder="Roll No." required>
+                </label>
+   		    </div>
+        </div>
+              
+            
+            <div class="form-group required">
+                    <label for="col_add" class="col-md-12 col-form-label control-label">Institute/ College Address
+                        <input type="text" class="form-control col-md-12" id="col_add" placeholder="Institute/College Address" required>
+                    </label>
+            </div>       
+
+
+        </div>
+        
+
+        <!-- Applicant Education details -->
+
+         <p class="bg-info text-white card-header col-md-12 ">Applicant Education Details</p> 
+
+            <div class="alert alert-warning col-sm-12 ">
+			Please fill all the fields for Education type Primary and Secondary. To add new Education category click on "Add" button   
+            </div>
+                 
+         <div class="card">
+
+        <table id="myTable" class=" table order-list">
+    <thead>
+        <tr>
+            <td>Education Category</td>
+            <td>Institute name</td>
+            <td>Institute Address</td>
+            <td>Year From</td>
+            <td>Year to</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col-sm-4">
+                <input type="text" name="education" class="form-control col-md-2" />
+            </td>
+            <td class="col-sm-4">
+                <input type="text" name="i_name"  class="form-control"/>
+            </td>
+            <td class="col-sm-3">
+                <input type="text" name="i_address"  class="form-control"/>
+            </td>
+            <td class="col-sm-3">
+                <input type="text" name="from"  class="form-control"/>
+            </td> 
+            <td class="col-sm-3">
+                <input type="text" name="to"  class="form-control"/>
+            </td>
+            
+            <td colspan="5">
+                <input type="button" class="btn btn-lg btn-block " id="addrow" value="Add Row" />
+            <td class="col-sm-2"><a class="deleteRow"></a></td>
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+    var counter = 0;
+
+    $("#addrow").on("click", function () {
+        var newRow = $("<tr>");
+        var cols = "";
+
+        cols += '<td><input type="text" class="form-control col-md-2" name="education' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control col-md-2" name="i_name' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control col-md-2" name="i_address' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control col-md-2" name="from' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control col-md-2" name="to' + counter + '"/></td>';
+
+        cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
+        newRow.append(cols);
+        $("table.order-list").append(newRow);
+        counter++;
+    });
+
+
+
+    $("table.order-list").on("click", ".ibtnDel", function (event) {
+        $(this).closest("tr").remove();       
+        counter -= 1
+    });
+
+
+});
+
+
+
+function calculateRow(row) {
+    var price = +row.find('input[name^="price"]').val();
+
+}
+
+function calculateGrandTotal() {
+    var grandTotal = 0;
+    $("table.order-list").find('input[name^="price"]').each(function () {
+        grandTotal += +$(this).val();
+    });
+    $("#grandtotal").text(grandTotal.toFixed(2));
+}
+
+
+</script>
+
+         
+
+            <!-- Native place details -->
+       
+        <p>
+            <p class="bg-info text-white card-header col-md-12 ">Native Place Details</p> 
+
+
+           
+                 
+            
+            <div class="alert alert-warning col-sm-12 ">
+			If State is other than Maharashtra, then district & taluka will not be available.Please mention the entire address in Address Line 1-2 or Village/Town along with state and pincode. In case if you do not have pincode enter 999999.   
+            </div> 
+         <div class="card col-md-12">
+             <div class="form-group required">
+                    <label for="address1" class="col-md-12 col-form-label control-label">Address Line 1
+                        <input type="text" class="form-control" id="address1" placeholder="Address Line 1">
+                    </label>
+            </div>
+
+
+            <div class="form-group">
+                    <label for="address2" class="col-md-12 col-form-label control-label">Address Line 2
+                        <input type="text" class="form-control" id="address2" plceholder="Address Line 2">
+                    </label>
+            </div>
+
+            
+            <div class="form-group">
+                    <label for="town" class="col-md-12 col-form-label control-label">Village/Town
+                        <input type="text" class="form-control" id="address2" plceholder="Village/Town">
+                    </label>
+            </div>     
+
+
+            <div class="form-group required row" >
+   		    <div class="col-md-6">
+   		        <label for="country" class="col-md-12 col-form-label control-label">Country
+   			   		<select class="form-control" id="country">
+   		                <option>--select--</option>		
+       	                <option>Ahmednagar</option>
+       	                <option>Akola</option>
+                        <option>Amravati</option>
+                        <option>Aurangabad</option>
+       	            </select>
+   		        </label>
+   		    </div>
+   		   
+
+
+   		    <div class="form group required col-md-6">
+   			    <label for="state" class="col-md-12 col-form-label control-label">State
+ 					<select class="form-control" id="state">
+ 						<option>--select State--</option>
+   		                <option>Andaman and Nicobar Islands</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chandigarh</option>
+                                <option>Chhattisgarh</option>
+                                <option>Dadra and Nagar Haveli</option>
+                                <option>Daman and Diu</option>
+                                <option>Delhi</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jammu and Kashmir</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Lakshadweep</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur	</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Puducherry</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Tripura</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Uttarakhand</option>
+                                <option>West Bengal</option>
+       	            </select>
+                </label>
+   		    </div>
+   	    </div>
+              
+
+        <div class="form-group required row" >
+   		    <div class="col-md-6">
+   		        <label for="district" class="col-md-12 col-form-label control-label">District
+   			   		<select class="form-control" id="district">
+   		               <option selected> -Your District-</option>
+                      <option value="AHM">Ahmednagar</option>
+                      <option value="AKO">Akola</option>
+                      <option value="AMR">Amravati</option>
+                      <option value="AUR">Aurangabad</option>
+                      <option value="BEE">Beed</option>
+                      <option value="BHA">Bhandara</option>
+                      <option value="BUL">Buldana</option>
+                      <option value="CHA">Chandrapur</option>
+                      <option value="DHU">Dhule</option>
+                      <option value="GAD">Gadchiroli</option>
+                      <option value="GON">Gondiya</option>
+                      <option value="HIN">Hingoli</option>
+                      <option value="JAG">Jalgaon</option>
+                      <option value="JAL">Jalna</option>
+                      <option value="KOL">Kolhapur</option>
+                      <option value="LAT">Latur</option>
+                      <option value="MUM">Mumbai City</option>
+                      <option value="MUS">Mumbai Suburban</option>
+                      <option value="NAG">Nagpur</option>
+                      <option value="NAN">Nanded</option>
+                      <option value="NAD">Nandurbar</option>
+                      <option value="NAS">Nashik</option>
+                      <option value="OSM">Osmanabad</option>
+                      <option value="PAL">Palghar</option>
+                      <option value="PAR">Parbhani</option>
+                      <option value="PUN">Pune</option>
+                      <option value="RAI">Raigarh</option>
+                      <option value="RAT">Ratnagiri</option>
+                      <option value="SAN">Sangli</option>
+                      <option value="SAT">Satara</option>
+                      <option value="SIN">Sindhudurg</option>
+                      <option value="SOL">Solapur</option>
+                      <option value="THA">Thane</option>
+                      <option value="WAR">Wardha</option>
+                      <option value="WAS">Washim</option>
+                      <option value="YAV">Yavatmal</option>
+       	            </select>
+   		        </label>
+   		    </div>
+   		   
+
+
+   		    <div class="form group required col-md-6">
+   			    <label for="taluka" class="col-md-12 col-form-label control-label">Taluka
+ 					<select class="form-control" id="select">
+   		                <option>--select--</option>		
+       	                <option>Ahmednagar</option>
+       	                <option>Akola</option>
+                        <option>Amravati</option>
+                        <option>Aurangabad</option>
+       	            </select>
+                </label>
+   		    </div>
+   	    </div>
+
+            
+            <div class="form-group required">
+                    <label for="pin" class="col-md-12 col-form-label control-label">Pin code
+                        <input type="text" class="form-control col-md-6" id="pin" placeholder="Pin code">
+                    </label>
+            </div>
+
+
+            <p class="form-group col-md-12">If the applicant has left the native place</p>
+
+
+
+        <div class="form-group row" >
+   		    <div class="col-md-6">
+   		        <label for="who" class="col-md-12 col-form-label control-label">Who left the place
+   			        <input type="text" class="form-control" id="who" placeholder="Name">
+   		        </label>
+   		    </div>
+   		    <div class="form-group col-md-6">
+   			    <label for="when" class="col-md-12 col-form-label">When was the place left Year(YYYY)
+ 			        <input type="text" class="form-control" id="when" placeholder="YYYY">
+                </label>
+   		    </div>
+        </div>
+
+
+        <div class="form-group">
+   		    <div class="form-group col-md-6">
+   		        <label for="reason" class="col-md-12 col-form-label control-label">Reason for Leaving
+   			   		<select class="form-control" id="reason">
+   		                <option>--select--</option>		
+       	                <option>Education</option>
+       	                <option>Business</option>
+                        <option>Service</option>
+                        <option>other</option>
+       	            </select>
+   		        </label>
+   		    </div>        
+        </div>
+         
+
+        <div class="form-group row" >
+   		    <div class="col-md-6">
+   		        <label for="current" class="col-md-12 col-form-label control-label">Since when applicant is residing at current address(YYYY) 
+   			        <input type="text" class="form-control" id="division" placeholder="Division">
+   		        </label>
+   		    </div>
+   		    <div class="form-group col-md-6">
+                   <label class="col-sm-12 col-form-label control-label">Do you own land or house at native place?
+                      <div class="form-check form-check-inline col-sm-12">
+                      	<label><input type="radio" name="rad">Yes</label>
+                      </div>  
+                      <div class="form-check form-check-inline  col-sm-12">
+                      	<label><input type="radio" name="rad">No</label>
+                      </div>
+                        </label>  
+                    
+            </div>   
+        </div>       
+
+        
+        
+        <div class="form-group">
+                    <label for="relation" class="col-md-12 col-form-label control-label">Name and relation of the person staying at native place
+                        <input type="text" class="form-control" id="relation" plceholder="Name and relation">
+                    </label>
+        </div>
+
+
+         <div class="form-group">
+                    <label for="nativeAddress" class="col-md-12 col-form-label control-label">Adderss of the person staying at native place
+                        <textarea class="form-control" rows="2" id="nativeAddress"></textarea>
+                    </label>
+        </div>
+
+        <div class="form-group">
+                    <label for="number" class="col-md-6 col-form-label control-label">Telephone no
+                        <input type="text" class="form-control" id="number" plceholder="Telephone No.">
+                    </label>
+        </div>
+      
+      
+       </div>
+
+   </p>
+
+    <div class="buttonholder">
+      	<a href="Birth_place_details.html" class="previous">&laquo; Previous</a>
+       	<button type="button" class="save" id="save">Save</button>
+       <a href="Family and parents details.html" class="next" id="next">Next &raquo;</a>
+
+       </div>
+</div>
+</form>
+</body>
+</html>
